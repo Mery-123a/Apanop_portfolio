@@ -176,7 +176,13 @@ body.light-theme .cursor-glow{ mix-blend-mode:multiply; }
 .hero-eyebrow{ font-family:var(--font-mono); font-size:13px; color:var(--sky-bright); margin-bottom:14px; }
 .hero h1{ font-family:var(--font-display); font-size:clamp(40px,6vw,72px); font-weight:700; line-height:1.02; letter-spacing:-1.5px; color:var(--text); margin-bottom:10px; }
 .hero h2{ font-family:var(--font-display); font-size:clamp(17px,2vw,22px); font-weight:500; color:var(--text-dim); margin-bottom:22px; }
-.hero-description{ max-width:520px; color:var(--text-dim); font-size:16px; margin-bottom:0 auto 28px; text-align: center; }
+.hero-description {
+  max-width: 520px;
+  color: var(--text-dim);
+  font-size: 16px;
+  margin: 0 auto 28px ;
+  text-align: center ;
+  align-self: center;}
 
 .hero-contact-line{ display:flex; flex-wrap:wrap; gap:12px; margin-bottom:26px; }
 .pill-link{
@@ -524,11 +530,11 @@ body.light-theme .cursor-glow{ mix-blend-mode:multiply; }
       <p class="hero-eyebrow">// hey, I'm</p>
       <h1>Apanop Hany</h1>
       <h2>Computer Science Student &amp; Web Developer</h2>
-     <p style="display: flex; justify-content: center; align-items: center; height: 100px;">
-        I'm passionate about programming, problem-solving, and building practical software
-        solutions. I continuously develop my skills in C++, C#, databases, and web development
-        while focusing on creating high-quality work.
-      </p>
+    <p class="hero-description">
+  I'm passionate about programming, problem-solving, and building practical software
+  solutions. I continuously develop my skills in C++, C#, databases, and web development
+  while focusing on creating high-quality work.
+</p>
 
       <div class="hero-buttons">
         <a href="#contact" class="btn btn-primary"><span>Let's Talk</span><i class="fa-solid fa-arrow-right"></i></a>
