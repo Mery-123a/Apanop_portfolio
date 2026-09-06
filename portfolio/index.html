@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apanop Hany — Portfolio</title>
+<meta name="description" content="Apanop Hany — Computer Science student and aspiring freelance web developer.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+:root{--bg:#f5f1ea;--ink:#171717;--muted:#6b665f;--brown:#8a5a44;--line:#d8cec2;--card:#fbf9f5;--dark:#161515}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.6} a{color:inherit;text-decoration:none} .wrap{width:min(1120px,92%);margin:auto}
+nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(1100px,90%);background:rgba(245,241,234,.86);backdrop-filter:blur(16px);border:1px solid rgba(216,206,194,.8);border-radius:18px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;z-index:20} .brand{font-weight:700;letter-spacing:.04em} nav .links{display:flex;gap:24px;font-size:13px;color:var(--muted)}
+.hero{padding:150px 0 85px} .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center} .eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--brown);font-weight:700} h1{font-family:'Playfair Display',serif;font-size:clamp(58px,9vw,102px);line-height:.88;margin:15px 0 20px;font-weight:700;letter-spacing:-.04em} .role{font-size:20px;max-width:620px;margin:0 0 25px;color:#302e2b} .intro{color:var(--muted);max-width:610px;font-size:15px} .cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap} .btn{padding:13px 18px;border-radius:999px;border:1px solid var(--ink);font-size:14px;font-weight:600} .btn.primary{background:var(--ink);color:white}
+.photo{position:relative;max-width:380px;margin-inline:auto} .photo img{width:100%;aspect-ratio:1/1.08;object-fit:cover;border-radius:28px;display:block;filter:saturate(.9)} .photo::after{content:'';position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--brown);border-radius:28px;z-index:-1}
+section{padding:90px 0} .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:35px} .num{font-size:12px;color:var(--brown);font-weight:700;letter-spacing:.2em} h2{font-family:'Playfair Display',serif;font-size:clamp(38px,5vw,62px);line-height:1;margin:8px 0 0} .lead{max-width:520px;color:var(--muted);font-size:15px}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start} .about-text{font-size:18px;line-height:1.75} .quote{font-family:'Playfair Display',serif;font-size:28px;line-height:1.25;color:var(--brown);padding-top:25px;border-top:1px solid var(--line)}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px} .card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:25px;min-height:185px} .card h3{font-size:16px;margin:0 0 10px} .card p{margin:0;color:var(--muted);font-size:14px}
+.timeline{border-top:1px solid var(--line)} .row{display:grid;grid-template-columns:150px 1fr;gap:30px;padding:27px 0;border-bottom:1px solid var(--line)} .date{color:var(--brown);font-size:13px;font-weight:700} .row h3{margin:0 0 3px;font-size:18px} .row .meta{color:var(--muted);font-size:13px;margin-bottom:8px}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:18px} .skillbox{border:1px solid var(--line);border-radius:22px;padding:28px;background:var(--card)} .skillbox h3{font-family:'Playfair Display',serif;font-size:28px;margin:0 0 18px} .chips{display:flex;flex-wrap:wrap;gap:9px} .chip{border:1px solid var(--line);padding:9px 12px;border-radius:999px;font-size:13px;background:white}
+.project{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px;align-items:start} .project-title{font-family:'Playfair Display',serif;font-size:44px;line-height:1.05;margin:0 0 12px} .project p{color:var(--muted)} .principles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px} .principle{padding:18px;border-top:2px solid var(--ink);font-weight:600;font-size:13px}
+.contact{background:var(--dark);color:white;border-radius:35px;padding:56px} .contact .eyebrow{color:#d3a58d} .contact-grid{display:flex;justify-content:space-between;gap:40px;align-items:end} .contact h2{margin-bottom:18px} .contact p{color:#c9c2bb;max-width:500px} .contact-info{display:grid;gap:9px;font-size:14px} .contact-info a{color:white;border-bottom:1px solid #6e6760;padding-bottom:3px}
+footer{padding:28px 0 42px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between}
+@media(max-width:800px){nav .links{display:none} .hero-grid,.about,.project,.contact-grid{grid-template-columns:1fr;display:grid} .hero{padding-top:120px} .photo{max-width:320px} .cards,.skills{grid-template-columns:1fr} .row{grid-template-columns:1fr;gap:7px} .principles{grid-template-columns:1fr 1fr} .contact{padding:35px 26px}}
+
+/* ===== Premium motion layer ===== */
+html{scroll-behavior:smooth}
+body{overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(circle at 10% 10%,rgba(138,90,68,.10),transparent 25%),radial-gradient(circle at 88% 28%,rgba(41,184,194,.08),transparent 24%),radial-gradient(circle at 50% 88%,rgba(138,90,68,.06),transparent 22%)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");mix-blend-mode:multiply}
+nav{transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,background .45s}nav.scrolled{box-shadow:0 15px 50px rgba(0,0,0,.10);background:rgba(251,249,245,.92)}nav .links a{position:relative;padding:5px 0}nav .links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--brown);transition:right .3s ease}nav .links a:hover::after,nav .links a.active::after{right:0}
+.hero{min-height:94vh;display:flex;align-items:center;position:relative}.hero::before{content:"";position:absolute;width:520px;height:520px;right:-220px;top:70px;border-radius:50%;border:1px solid rgba(138,90,68,.16);animation:spinSlow 20s linear infinite}.hero::after{content:"";position:absolute;width:18px;height:18px;left:9%;bottom:13%;border-radius:50%;background:var(--teal);box-shadow:0 0 0 12px rgba(41,184,194,.08),0 0 70px rgba(41,184,194,.30);animation:float 4.5s ease-in-out infinite}
+.eyebrow{animation:fadeUp .8s both}.hero h1{animation:revealUp 1s .08s both}.role{animation:fadeUp .9s .18s both}.intro{animation:fadeUp .9s .28s both}.cta{animation:fadeUp .9s .38s both}.photo{animation:photoIn 1.15s .15s cubic-bezier(.18,.8,.2,1) both;transform-style:preserve-3d}.photo img{transition:transform .55s cubic-bezier(.2,.8,.2,1),filter .55s}.photo:hover img{transform:scale(1.035) rotate(-1.2deg);filter:saturate(1) contrast(1.02)}.photo::before{content:"AVAILABLE FOR OPPORTUNITIES";position:absolute;right:-20px;top:18%;writing-mode:vertical-rl;font-size:9px;letter-spacing:.22em;color:var(--muted);opacity:.7;animation:float 5s ease-in-out infinite}
+.btn{transition:transform .25s ease,box-shadow .25s ease,background .25s ease}.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.12)}.btn.primary:hover{box-shadow:0 15px 35px rgba(0,0,0,.20)}
+section{position:relative}.section-head{transition:transform .6s ease}.card,.skillbox,.row,.principle{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}.card:hover,.skillbox:hover{transform:translateY(-8px);box-shadow:0 22px 50px rgba(0,0,0,.08);border-color:rgba(138,90,68,.35)}.row:hover{transform:translateX(8px)}.principle{transition:transform .3s ease}.principle:hover{transform:translateY(-5px);border-top-color:var(--brown)}
+.chip{transition:transform .22s ease,background .22s ease,border-color .22s ease}.chip:hover{transform:translateY(-3px);background:var(--ink);color:#fff;border-color:var(--ink)}
+.contact{position:relative;overflow:hidden}.contact::before,.contact::after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.08)}.contact::before{width:320px;height:320px;right:-120px;top:-140px;animation:spinSlow 18s linear infinite}.contact::after{width:180px;height:180px;left:-70px;bottom:-100px;animation:spinSlow 15s linear reverse infinite}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}.reveal.show{opacity:1;transform:none}.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}.reveal-left.show{opacity:1;transform:none}.reveal-right{opacity:0;transform:translateX(40px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}.reveal-right.show{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(24px)}.stagger.show>*{animation:fadeUp .7s both}.stagger.show>*:nth-child(1){animation-delay:.03s}.stagger.show>*:nth-child(2){animation-delay:.10s}.stagger.show>*:nth-child(3){animation-delay:.17s}.stagger.show>*:nth-child(4){animation-delay:.24s}.stagger.show>*:nth-child(5){animation-delay:.31s}.stagger.show>*:nth-child(6){animation-delay:.38s}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--brown),var(--teal));z-index:100;box-shadow:0 0 15px rgba(41,184,194,.35)}
+#cursor{position:fixed;width:18px;height:18px;border:1px solid var(--brown);border-radius:50%;pointer-events:none;z-index:1000;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s,border-color .2s,opacity .2s;mix-blend-mode:multiply;opacity:.75}.cursor-dot{position:fixed;width:5px;height:5px;border-radius:50%;background:var(--ink);pointer-events:none;z-index:1001;transform:translate(-50%,-50%);transition:transform .05s}
+.hero-grid .eyebrow::before{content:"01";display:inline-block;margin-right:10px;padding:4px 8px;border:1px solid var(--line);border-radius:999px;letter-spacing:.08em}
+[data-tilt]{transform-style:preserve-3d;will-change:transform}
+@keyframes revealUp{from{opacity:0;transform:translateY(42px);letter-spacing:-.01em}to{opacity:1;transform:none;letter-spacing:-.04em}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes photoIn{from{opacity:0;transform:translateY(35px) rotate(3deg) scale(.95)}to{opacity:1;transform:none}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal,.reveal-left,.reveal-right,.stagger>*{opacity:1!important;transform:none!important}}
+@media(max-width:800px){.hero{min-height:auto}.hero::before,.photo::before{display:none}.photo:hover img{transform:none}#cursor,.cursor-dot{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="brand">APANOP HANY</div><div class="links"><a href="#about">About</a><a href="#journey">Journey</a><a href="#skills">Skills</a><a href="#direction">Work</a><a href="#contact">Contact</a></div></nav>
+<main>
+<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Computer Science · Web Development</div><h1>Apanop<br>Hany.</h1><p class="role">Computer Science student & aspiring freelance web developer.</p><p class="intro">I’m passionate about programming, problem-solving, and building practical software solutions. I continuously develop my skills in C++, C#, databases, and web development while focusing on creating high-quality work.</p><div class="cta"><a class="btn primary" href="#direction">Explore my work</a><a class="btn" href="#contact">Let's talk</a></div></div><div class="photo"><img src="images/photo.jpg"></div></section>
+
+<section id="about" class="reveal"><div class="wrap"><div class="section-head"><div><div class="num">01 / ABOUT</div><h2>Built around<br>curiosity & purpose.</h2></div><p class="lead">A strong technical mindset, a practical approach, and a commitment to learning through real projects.</p></div><div class="about"><div><p class="about-text">I’m a third-year Computer Science student at Benha University with a strong technical mindset and a passion for solving complex problems. I’m a fast learner who enjoys understanding how things work and finding efficient solutions to challenges.</p></div><div><p class="quote">“I learn, I improve, and I build with purpose.”</p><div class="cards stagger"><article class="card" data-tilt><h3>Technical & Problem Solving</h3><p>I enjoy analyzing challenges, breaking them into smaller problems, and finding practical and efficient solutions.</p></article><article class="card"><h3>My Approach</h3><p>I aim to understand client needs, focus on the problem before building the solution, and deliver real value.</p></article></div></div></div></div></section>
+<section class="reveal"><div class="wrap"><div class="section-head"><div><div class="num">02 / DIFFERENCE</div><h2>What makes<br>me different.</h2></div></div><div class="cards stagger"><article class="card" data-tilt><h3>Continuous Learning</h3><p>Always learning new technologies and improving my programming skills.</p></article><article class="card"><h3>Problem Solving</h3><p>I focus on understanding problems and finding simple and effective solutions.</p></article><article class="card"><h3>Attention to Detail</h3><p>I care about creating clean, organized, and user-friendly websites.</p></article><article class="card"><h3>Client Satisfaction</h3><p>I listen to client needs and work to deliver solutions that meet their expectations.</p></article></div></div></section>
+<section id="journey" class="reveal"><div class="wrap"><div class="section-head"><div><div class="num">03 / JOURNEY</div><h2>Education &<br>experience in progress.</h2></div></div><div class="timeline stagger"><div class="row"><div class="date">2024 — PRESENT</div><div><h3>B.Sc. in Computer Science</h3><div class="meta">Faculty of Science, Benha University · Third-Year Student</div></div></div><div class="row"><div class="date">2025 — PRESENT</div><div><h3>Web Development Projects</h3><div class="meta">Personal & Academic Projects</div><p>Developing web solutions and applying programming concepts to real-world problems.</p></div></div><div class="row"><div class="date">2024 — PRESENT</div><div><h3>Technical Problem Solving</h3><div class="meta">Computer Science Projects</div><p>Analyzing problems, designing efficient solutions, and implementing them using programming.</p></div></div><div class="row"><div class="date">2024 — PRESENT</div><div><h3>Continuous Learning</h3><div class="meta">Self-Development</div><p>Building technical skills through hands-on projects, practice, and learning new technologies.</p></div></div></div></div></section>
+<section id="skills" class="reveal"><div class="wrap"><div class="section-head"><div><div class="num">04 / SKILLS</div><h2>What I<br>work with.</h2></div></div><div class="skills"><div class="skillbox reveal-left" data-tilt><h3>Technical</h3><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">C++</span><span class="chip">C#</span><span class="chip">Data Structures</span><span class="chip">Algorithms</span><span class="chip">Programming Fundamentals</span><span class="chip">Problem Solving</span></div></div><div class="skillbox reveal-right" data-tilt><h3>Soft Skills</h3><div class="chips"><span class="chip">Communication</span><span class="chip">Teamwork</span><span class="chip">Time Management</span><span class="chip">Continuous Learning</span></div></div></div></div></section>
+<section id="direction" class="reveal"><div class="wrap"><div class="section-head"><div><div class="num">05 / WORK</div><h2>Turning learning<br>into real work.</h2></div></div><div class="project"><div><p class="project-title">Practical digital solutions.</p><p>The current portfolio material highlights personal and academic projects. The strongest direction is to show each project as a clear case study: the problem, technologies, process, challenges, solution, and outcome.</p></div><div><div class="principles stagger"><div class="principle">Understand<br><span style="color:#6b665f;font-weight:400">Clarify the real problem.</span></div><div class="principle">Build<br><span style="color:#6b665f;font-weight:400">Choose an efficient approach.</span></div><div class="principle">Refine<br><span style="color:#6b665f;font-weight:400">Focus on quality & usability.</span></div><div class="principle">Deliver<br><span style="color:#6b665f;font-weight:400">Create real value.</span></div></div></div></div></div></section>
+<section id="contact" class="reveal"><div class="wrap"><div class="contact"><div class="eyebrow">06 / CONTACT</div><div class="contact-grid"><div><h2>Let’s build<br>something useful.</h2><p>Open to freelance web-development opportunities, collaborations, and practical projects.</p></div><div class="contact-info"><a href="tel:01202544452">01202544452</a><a href="mailto:apanoph312@gmail.com">apanoph312@gmail.com</a><span>Shubra El-Kheima, Qalyubia</span></div></div></div></div></section>
+</main><footer class="wrap"><span>© Apanop Hany</span><span>Portfolio · Computer Science</span></footer>
+
+<div id="progress"></div><div id="cursor"></div><div class="cursor-dot"></div>
+<script>
+(() => {
+  const nav=document.querySelector('nav'), progress=document.getElementById('progress');
+  const sections=[...document.querySelectorAll('main section[id]')];
+  const links=[...document.querySelectorAll('nav .links a')];
+  const updateScroll=()=>{
+    const max=document.documentElement.scrollHeight-window.innerHeight;
+    progress.style.width=(max>0?(window.scrollY/max)*100:0)+'%';
+    nav.classList.toggle('scrolled',window.scrollY>30);
+    let current=''; sections.forEach(s=>{if(window.scrollY>=s.offsetTop-180) current=s.id});
+    links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current));
+  };
+  addEventListener('scroll',updateScroll,{passive:true}); updateScroll();
+
+  const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target)}}),{threshold:.14,rootMargin:'0px 0px -45px'});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.stagger').forEach(el=>observer.observe(el));
+
+  const cursor=document.getElementById('cursor'),dot=document.querySelector('.cursor-dot');
+  if(matchMedia('(pointer:fine)').matches){
+    let x=innerWidth/2,y=innerHeight/2,dx=x,dy=y;
+    addEventListener('mousemove',e=>{x=e.clientX;y=e.clientY;dot.style.transform=`translate(${x-50}%,${y-50}%)`});
+    const loop=()=>{dx+=(x-dx)*.16;dy+=(y-dy)*.16;cursor.style.left=dx+'px';cursor.style.top=dy+'px';requestAnimationFrame(loop)};loop();
+    document.querySelectorAll('a,button,.card,.chip,.skillbox').forEach(el=>{
+      el.addEventListener('mouseenter',()=>{cursor.style.width='32px';cursor.style.height='32px';cursor.style.background='rgba(138,90,68,.08)'});
+      el.addEventListener('mouseleave',()=>{cursor.style.width='18px';cursor.style.height='18px';cursor.style.background='transparent'});
+    });
+  }
+
+  document.querySelectorAll('[data-tilt]').forEach(card=>{
+    if(!matchMedia('(pointer:fine)').matches)return;
+    card.addEventListener('mousemove',e=>{
+      const r=card.getBoundingClientRect(), px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
+      card.style.transform=`perspective(900px) rotateX(${py*-5}deg) rotateY(${px*6}deg) translateY(-6px)`;
+    });
+    card.addEventListener('mouseleave',()=>card.style.transform='');
+  });
+
+  // Gentle text reveal for headings as they enter view.
+  const textObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.animate([{opacity:0,transform:'translateY(18px)'},{opacity:1,transform:'translateY(0)'}],{duration:650,easing:'cubic-bezier(.2,.8,.2,1)',fill:'forwards'});textObs.unobserve(e.target)}}),{threshold:.6});
+  document.querySelectorAll('h2').forEach(h=>textObs.observe(h));
+
+  // Magnetic buttons.
+  if(matchMedia('(pointer:fine)').matches){
+    document.querySelectorAll('.btn').forEach(btn=>{
+      btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();btn.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.12}px, ${(e.clientY-r.top-r.height/2)*.12}px)`});
+      btn.addEventListener('mouseleave',()=>btn.style.transform='');
+    });
+  }
+})();
+</script>
+</body></html>
